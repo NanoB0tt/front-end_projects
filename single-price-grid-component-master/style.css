@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+body {
+	background-color: hsl(204, 43%, 93%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.top { grid-area: top;}
+.left { grid-area: left;}
+.right { grid-area: right;}
+
+.grid-container {
+	box-sizing: border-box;
+	width: 600px;
+	font-family: 'Karla', sans-serif;
+	font-size: 16px;
+	display: grid;
+	grid: 
+		'top top'
+		'left right';
+}
+
+.top {
+	width: 600px;
+	height: 230px;
+	background-color: #fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 2em 2.5em 0 2em;
+}
+
+.top h1 {
+	color: hsl(179, 62%, 43%);
+	font-weight: 700;
+}
+
+.top h2 {
+	color: hsl(71, 73%, 54%);
+	font-weight: 700;
+}
+
+.top p {
+	color: hsl(202.5, 9.7%, 48.6%);
+	font-weight: 400;
+}
+
+.left {
+	background-color: hsl(179, 62%, 43%);
+	border-bottom-left-radius: 5px;
+	position: relative;
+	text-align: center;
+	padding: 2em 1em 0 2em;
+}
+
+.left h2,
+span, button{
+	color: #fff;
+	font-weight: 700
+}
+
+.left .grey-para {
+	color: hsl(202.5, 9.7%, 48.6%);
+} 
+
+.left span {
+	padding-right: .7em;
+	font-size: 2em;
+}
+
+.left p  {
+	color: #fff;
+}
+
+.button {
+	position: absolute;
+	left: 20%;
+	bottom: 15%;
+	background-color: hsl(71, 73%, 54%);
+	padding: 1em 5em 1em 5em;
+	border: none;
+	border-radius: 5px;
+	font-weight: 700;
+	font-size: .9em;
+}
+
+
+.right {
+	background-color: hsl(182.5, 54.8%, 57.5%);
+	border-bottom-right-radius: 5px;
+	text-align: left;
+	padding: 2em 2.5em 0 2em;
+}
+
+.right p,
+.right h2 {
+	color: white;
+}
+
+.right p {
+	line-height: 1.5em;
+}
+
+.left, .right {
+	height: 250px;
+}
