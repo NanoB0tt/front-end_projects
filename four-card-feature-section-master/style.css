@@ -8,7 +8,7 @@ body {
 	align-items: center;
 	font-family: 'Poppins', sans-serif;
 	font-size: 15px;
-	background-color: hsl(0, 0%, 90.2%);
+	background-color: hsl(0, 0%, 94.9%);
 }
 
 .header {
@@ -46,6 +46,10 @@ body {
 		width: 100%;
 		text-align: center;
 		padding-bottom: 2.5rem;
+	}
+
+	.header .thin-grey {
+		line-height: 1rem;
 	}
 
 	.container .box {
