@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Four card feature section</title>
@@ -16,29 +17,45 @@
 </head>
 <body>
   
-  Reliable, efficient delivery
-  Powered by Technology
+  <div class="header">
+    <h1 class="thin-grey">Reliable, efficient delivery</h1>
+    <h1>Powered by Technology</h1>
 
-  Our Artificial Intelligence powered tools use millions of project data points 
-  to ensure that your project is successful
+    <p>Our Artificial Intelligence powered tools use millions of project data<br> points 
+      to ensure that your project is successful</p>
 
-  Supervisor
-  Monitors activity to identify project roadblocks
+  </div>
 
-  Team Builder
-  Scans our talent network to create the optimal team for your project
+  <div class="container">
+    <div class="supervisor box">
+      <h1>Supervisor</h1>
+      <p>Monitors activity to identify project roadblocks</p>
+      <img src="images/icon-supervisor.svg">
+    </div>
 
-  Karma
-  Regularly evaluates our talent to ensure quality
+    <div class="teamb box">
+      <h1>Team Builder</h1>
+      <p>Scans our talent network to create the optimal team for your project</p>
+      <img src="images/icon-team-builder.svg">
+    </div>
 
-  Calculator
-  Uses data from past projects to provide better delivery estimates
+    <div class="karma box">
+      <h1>Karma</h1>
+      <p>Regularly evaluates our talent to ensure quality</p>
+      <img src="images/icon-karma.svg">
+    </div>
 
+    <div class="calc box">
+      <h1>Calculator</h1>
+      <p>Uses data from past projects to provide better delivery estimates</p>
+      <img src="images/icon-calculator.svg">
+    </div>
+  </div>
   
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Dbbuk</a>.
     </p>
   </footer>
 </body>

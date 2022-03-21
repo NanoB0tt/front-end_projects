@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+body {
+	height: 100%;
+	padding: 6rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+	background-color: hsl(0, 0%, 90.2%);
+}
+
+.header {
+	width: 20rem;
+	text-align: center;
+	padding-bottom: 2.5rem;
+}
+
+.header .thin-grey {
+	color: grey;
+	text-decoration: none;
+	font-weight: 200;
+}
+
+.header h1 {
+	font-weight: 600;
+}
+
+.header p {
+	color: grey;
+}
+
+@media (min-width: 40rem) {
+	.container {
+		display: grid;
+		grid-template-areas: 
+			'.......... teamb ....'
+			'supervisor teamb calc'
+			'supervisor karma calc'
+			'.......... karma ....';
+		gap: 1.5rem;
+	}
+
+	.header {
+		width: 100%;
+		text-align: center;
+		padding-bottom: 2.5rem;
+	}
+
+	.container .box {
+		height: 17rem;
+		width: 20rem;
+		background-color: #fff;
+		padding: 2rem;
+		box-shadow: 5px 8px 5px grey;
+	}
+}
+
+
+.supervisor { grid-area: supervisor;}
+.teamb { grid-area: teamb; }
+.calc { grid-area: calc;}
+.karma { grid-area: karma; }
+
+.box {
+	height: 16rem;
+	width: 17rem;
+	background-color: #fff;
+	padding: 2rem;
+	box-shadow: 5px 8px 5px grey;
+}
+
+.box h1 {
+	font-weight: 400;
+}
+
+.box p {
+	color: grey;
+}
+
+.supervisor {
+	border-top: .5rem solid #71c6e1;
+	border-radius: 2%;
+	position: relative;
+}
+.teamb {
+	border-top: .5rem solid red;
+	border-radius: 2%;
+	position: relative;
+}
+.calc {
+	border-top: .5rem solid blue;
+	border-radius: 2%;
+	position: relative;
+}
+.karma {
+	border-top: .5rem solid orange;
+	border-radius: 2%;
+	position: relative;
+}
+
+img {
+	position: absolute;
+	bottom: 2rem;
+	right: 2rem;
+}
