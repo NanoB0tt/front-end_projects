@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-html {
-	font-family: 'Poppins', 'Open sans';
-}
-
 body {
 	background-image: url('images/bg-mobile.svg');
 	background-repeat: no-repeat;
 	background-color: hsl(257, 40%, 49%);
+	background-size: 100%;
 	margin: 1.6rem;
+}
+
+@media (min-width: 40rem) {
+	body {
+		background-size: 100%;
+		background-position: center;
+
+	}
 }
 
 .logo-div {
@@ -34,7 +39,65 @@ body {
 
 }
 
+@media (min-width: 60rem) {
+	.container {
+		display: grid;
+		grid-template-areas: 
+			'image title'
+			'image para'
+			'image para'
+			'image button'
+			'image ......'
+			'image ......'
+			'..... icons';
+	}
+
+	.container img {grid-area: image}
+	.container .title {grid-area: title}
+	.container .para {grid-area: para}
+	.container button {grid-area: button}
+	.container .icons {grid-area: icons}
+
+	.container h1 {
+		padding-top: 2rem;
+		text-align: left;
+		max-width: 20rem;
+		line-height: 3rem;
+	}
+
+	.container p {
+		text-align: left;
+		max-width: 29rem;
+		height: 1rem;
+	}
+
+	.container button {
+		width: 37%;
+		height: 100%;
+		padding: .55rem;
+		border-radius: 2rem;
+		border: none;
+		color: hsl(257, 40%, 49%);
+		font-family: 'Open sans';
+		font-size: .9rem;
+		font-weight: 400;
+	}
+
+	.logo {
+		width: 12%;
+	}
+
+	.mockups {
+		width: 80%;
+		padding-top: 3rem;
+		padding-bottom: 2rem;
+
+	}
+
+}
+
 h1, p {
+	max-width: 20rem;
 	text-align: center;
 	color: #fff;
 }
