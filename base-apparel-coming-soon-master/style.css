@@ -119,6 +119,23 @@ button:hover {
 	box-shadow: 3px 3px 2px grey;
 }
 
+.warning-error {
+	content: '';
+	width: 2rem;
+	height: 2rem;
+	background-image: url(images/icon-error.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 7px;
+	right: 25%;
+}
+
+.info {
+	position: absolute;
+	top: 1.5rem;
+}
+
 @media (min-width: 40rem) {
 	.container {
 		display: grid;
@@ -176,6 +193,8 @@ button:hover {
 		right: 12%;
 	}
 }
+
+
 
 
 
