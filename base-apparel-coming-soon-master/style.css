@@ -6,24 +6,54 @@
 	--dark-grayish: hsl(0, 6%, 24%);
 }
 
-
 body {
 	font-family: 'Josefin Sans';
 	font-size: 16px;
 	background-image: url(images/bg-pattern-desktop.svg);
 	margin: 0;
+	height: 100vh;
 }
 
-img {
+.div-logo {
+	display: flex;
+	width: 100%;
+}
+
+.div-logo img{
+	padding: 2rem 2rem;
+	width: 7rem;
+}
+
+.container {
+	display: flex;	
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+}
+
+.div-img {
+	width: 100%;
+	height: 100vh;
+}
+
+.div-img img {
+	width: 100%;
 	margin: 0;
 }
 
-h1 span {
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.content h1 span {
 	font-weight: 300;
 	color: var(--desaturated-red);
 }
 
-h1 {
+.content h1 {
 	text-transform: uppercase;
 	font-size: 2.5rem;
 	font-weight: 600;
@@ -35,31 +65,18 @@ h1 {
 	max-width: 20rem;
 }
 
-.div-logo img{
-	padding: 2rem 2rem;
-	width: 7rem;
-}
-
-.div-img img{
-	width: 100%;
-}
-
-.container {
-	display: flex;	
-	flex-direction: column;
-	align-items: center;
-}
-
-.container p {
+.content p {
 	font-weight: 400;
 	color: var(--desaturated-red);
 	text-align: center;
 	max-width: 17.9rem;
-	margin: 2rem;
+	padding: 2rem;
+	margin: 0;
 }
 
-form {
+.content form {
 	width: 100%;
+	margin-bottom: 5rem;
 	position: relative;
 }
 
@@ -74,7 +91,6 @@ input {
 }
 
 button {
-	display: inline-block;
 	width: 4rem;
 	height: 3rem;
 	border-style: none;
@@ -103,6 +119,63 @@ button:hover {
 	box-shadow: 3px 3px 2px grey;
 }
 
+@media (min-width: 40rem) {
+	.container {
+		display: grid;
+		grid-template-areas:
+			'logo image'
+			'content image';
+	}
+
+	.div-logo {grid-area: logo;}
+	.content {grid-area: content;}
+	.div-img {grid-area: image;}
+
+	.div-logo {
+		height: 100%;
+	}
+
+	.div-logo img {
+		height: 2rem;
+		padding-left: 8rem;
+		padding-top: 5rem;
+	}
+
+	.div-img {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.div-img img {
+		max-width: 75%;
+	}
+
+	.content {
+		width: 40rem;
+		align-items: flex-start;
+	}
+
+	.content h1 {
+		font-size: 4rem;
+		text-align: left;
+		padding-left: 8rem;
+	}
+
+	.content p {
+		max-width: 27rem;
+		text-align: left;
+		padding-left: 8rem;
+	}
+
+	.content input {
+		margin-left: 8rem;
+		width: 60%;
+	}
+
+	button {
+		right: 12%;
+	}
+}
 
 
 
