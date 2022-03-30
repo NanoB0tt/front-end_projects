@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--clr-red: hsl(0, 100%, 74%);
+	--clr-green: hsl(154, 59%, 51%);
+	--clr-blue: hsl(248, 32%, 49%);
+	--clr-drk-blue: hsl(249, 10%, 26%);
+	--clr-gry-blue: hsl(246, 25%, 77%);
+}
+
+/*==== layout ====*/
+
+main {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.form-content,
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*==== styles ====*/
+
+body {
+	background: url(images/bg-intro-mobile.png) no-repeat center var(--clr-red);
+	margin: 0;
+}
+
+.blue-box {
+	display: inline-block;
+	background-color: var(--clr-blue);
+	padding: 1.3rem 4rem;
+	margin: 1rem 1rem;
+	border-radius: .7rem;
+}
+
+.form-content {
+	background-color: #fff;
+	margin: 0 1rem;
+	border-radius: .7rem;
+	padding: 1rem;
+}
+
+.form-content input {
+	width: 100%;
+	border-radius: .2rem;
+	padding: 1rem;
+	border: 1px solid var(--clr-gry-blue);
+}
+
+form :nth-child(1n +4) {
+	margin-top: 1rem;
+}
+
+.form-content button {
+	width: 100%;
+	padding: 1rem 0 1rem;
+	border-radius: .2rem;
+	border: none;
+	background-color: var(--clr-green);
+}
+
+/*==== typo ====*/
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	color: #fff;
+}
+
+.content h1 {
+	font-size: 2rem;
+	font-weight: 700;
+	margin: 0;
+	padding: 4rem 3rem 0rem;
+}
+
+.content p {
+	font-weight: 400;
+	max-width: 20rem;
+}
+
+.form-content input {
+	color: var(--clr-drk-blue);
+	font-weight: 600;
+}
+
+.form-content button {
+	color: inherit;
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+
+.form-content p {
+	color: var(--clr-gry-blue);
+	font-weight: 400;
+	font-size: .7rem;
+	max-width: 16rem;
+}
+
+footer p {
+	margin: 0;
+	color: #000;
+}
+
+/*==== alt classes====*/
+
+.span-pink {
+	color: var(--clr-red);
+}
+
+.hidden-label {
+	display: none;
+}
+
+.span-bold {
+	font-weight: 700;
+}
+
+.shadow {
+	box-shadow: 0 7px 5px 2px hsl(0, 37.1%, 50.8%);
+}
+
+.button-shadow {
+	box-shadow: inset 0 -5px 4px 0  hsl(152.4, 43.5%, 50%);
+}
