@@ -10,7 +10,7 @@
   <title>Frontend Mentor | Intro component with sign up form</title>
 
   <style>
-    .attribution { font-size: 11px; text-align: center; margin-top: 2rem; }
+    .attribution { font-size: 11px; text-align: center; margin-top: 5rem; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
@@ -21,30 +21,38 @@
 
       <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
         but understanding how developers think is invaluable.</p> 
-
-      <p class="blue-box shadow"><span class="span-bold">Try it free 7 days</span> then $20/mo. thereafter</p>
     </div>
 
-    <form class="form-content shadow">
-      <label class="hidden-label" for="first name">Enter your first name: </label> 
-      <input id="first name" name="first name" type="text" placeholder="First Name">
-      <label class="hidden-label" or="last name">Enter your last name: </label> 
-      <input id="last name" name="last name" type="text" placeholder="Last Name">
-      <label class="hidden-label" or="usermail">Enter your email: </label> 
-      <input id="usermail" name="usermail" type="email" placeholder="Email Address">
-      <label class="hidden-label" or="passw">Enter your password: </label> 
-<input id="passw" name="passw" type="password" placeholder="Password">
-      <button class="button-shadow" type="submit">Claim your free trial</button> 
-      <p>By clicking the button, you are agreeing to our <span class="span-pink">Terms and Services</span></p>
-    </form>
+    <div class="second-row">
+      <p class="blue-box shadow"><span class="span-bold">Try it free 7 days</span> then $20/mo. thereafter</p>
+
+      <form class="form-content shadow">
+        <label class="hidden-label" for="first name">Enter your first name: </label> 
+        <input id="first name" name="first name" type="text" placeholder="First Name">
+        <div class="hidden-label hidden-div">First name cannot be empty</div>
+        <label class="hidden-label" for="last name">Enter your last name: </label> 
+        <input id="last name" name="last name" type="text" placeholder="Last Name">
+        <div class="hidden-label hidden-div">Last name cannot be empty</div>
+        <label class="hidden-label" for="usermail">Enter your email: </label> 
+        <input id="usermail" name="usermail" type="email" placeholder="Email Address">
+        <div class="hidden-label hidden-div">Looks like this is not an email</div>
+        <label class="hidden-label" for="passw">Enter your password: </label> 
+        <input id="passw" name="passw" type="password" placeholder="Password">
+        <div class="hidden-label hidden-div">Password cannot be empty</div>
+        <button class="button-shadow" type="submit">Claim your free trial</button> 
+        <p>By clicking the button, you are agreeing to our <span class="span-pink">Terms and Services</span></p>
+      </form>
+
+    </div>
 
   </main>
   
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Dbbuk</a>.
     </p>
   </footer>
+  <script src="main.js"></script>
 </body>
 </html>
