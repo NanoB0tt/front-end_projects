@@ -1,5 +1,5 @@
-const firstName = document.getElementById('first name');
-const lastName = document.getElementById('last name');
+const firstName = document.getElementById('first-name');
+const lastName = document.getElementById('last-name');
 const email = document.getElementById('usermail');
 const passw = document.getElementById('passw');
 const hiddenDiv = document.getElementsByClassName('hidden-div')

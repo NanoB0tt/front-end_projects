@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
-- Live Site URL: [Live site](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/intro-component-with-signup-form-BJDYA3Qmc)
+- Live Site URL: [Live site](https://dbbuk.github.io/front-end_projects/intro-component-with-signup-form-master/)
 
 ## My process
 
@@ -39,7 +39,6 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 - Vanilla javascript
 
