@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600;700&display=swap');
+
+*, *::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--clr-vry-lght-blue: hsl(240, 78%, 98%);
+	--clr-lght-blue: hsl(234, 14%, 74%);
+	--clr-gry-blue: hsl(233, 13%, 49%);
+	--clr-drk-gry-blue: hsl(232, 13%, 33%);
+	--clr-lnr-grad-left: hsl(236, 72%, 79%);
+	--clr-lnr-grad-right: hsl(237, 63%, 64%);
+}
+
+/* ====background and fonts==== */
+
+html {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-size: 15px;
+}
+
+body {
+	background-image: url(images/bg-top.svg); 
+	background-repeat: no-repeat;
+	background-position: 15rem -2rem;
+	background-size: 18rem;
+	background-color: var(--clr-vry-lght-blue);
+}
+
+.card1,
+.card3 {
+	color: var(--clr-gry-blue);
+}
+
+.month-price {
+	font-size: 3rem;
+}
+
+button {
+	font-family: inherit;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+/* ====layout==== */
+
+body {
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+
+/* ====styles==== */
+
+.header {
+	text-align: center;
+}
+
+.card1,
+.card2,
+.card3{
+	text-align: center;
+}
+
+
+.card1,
+.card2,
+.card3 {
+	background-color: #a00;
+	width: 75%;
+	padding: 0 1rem 2rem;
+	border-radius: 1rem;
+}
+
+.year-price {
+	display: none;
+}
+
+.container ul {
+	list-style: none;
+	padding: 0;
+}
+
+.container li {
+	padding: 1rem 0 1rem;
+	border-top: 1px solid var(--clr-vry-lght-blue);
+}
+
+.container li:last-child {
+	border-bottom: 1px solid var(--clr-vry-lght-blue);
+}
+
+button {
+	width: 100%;
+	padding: 1rem 0;
+	background: linear-gradient(var(--clr-lnr-grad-left), var(--clr-lnr-grad-right));
+	border: none;
+	border-radius: .3rem;
+}
