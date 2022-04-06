@@ -14,6 +14,19 @@
 	--clr-lnr-grad-right: hsl(237, 63%, 64%);
 }
 
+/* ====layout==== */
+
+body {
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+}
+
 /* ====background and fonts==== */
 
 html {
@@ -32,10 +45,15 @@ body {
 
 .card1,
 .card3 {
-	color: var(--clr-gry-blue);
+	color: var(--clr-drk-gry-blue);
 }
 
-.month-price {
+.card2 {
+	color: #fff;
+}
+
+.month-price,
+.year-price {
 	font-size: 3rem;
 }
 
@@ -44,20 +62,6 @@ button {
 	text-transform: uppercase;
 	color: #fff;
 }
-
-/* ====layout==== */
-
-body {
-	margin: 0;
-}
-
-.container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 1.5rem;
-}
-
 
 /* ====styles==== */
 
@@ -75,13 +79,17 @@ body {
 .card1,
 .card2,
 .card3 {
-	background-color: #a00;
+	background-color: #fff;
 	width: 75%;
 	padding: 0 1rem 2rem;
 	border-radius: 1rem;
 }
 
-.year-price {
+.card2 {
+	background: linear-gradient(var(--clr-lnr-grad-left), var(--clr-lnr-grad-right));
+}
+
+.month-price {
 	display: none;
 }
 
@@ -99,10 +107,80 @@ body {
 	border-bottom: 1px solid var(--clr-vry-lght-blue);
 }
 
+.card2 button {
+	color: var(--clr-lnr-grad-right);
+	background: #fff;
+}
+
 button {
 	width: 100%;
 	padding: 1rem 0;
 	background: linear-gradient(var(--clr-lnr-grad-left), var(--clr-lnr-grad-right));
 	border: none;
 	border-radius: .3rem;
+}
+
+/* ====toggle switch==== */
+
+.labels-toggle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ball-box {
+	padding-right: .4rem;
+}
+
+.back-box {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.back-box::before {
+	display: inline-block;
+	content: '';
+	width: 2.5rem;
+	height: 1.5rem;
+	background: linear-gradient(var(--clr-lnr-grad-left), var(--clr-lnr-grad-right));
+	border-radius: 1rem;
+	margin-right: .4rem;
+}
+
+.back-box::after {
+	position: absolute;
+	left: .17rem;
+	right: 0;
+	content: ''; 
+	width: 1.2rem;
+	height: 1.2rem;
+	background-color: #fff;
+	border-radius: 1rem;
+	transition: 200ms ease-in-out;
+}
+
+.toggle {
+	display: none;
+}
+
+/* checked styles toggle */
+
+.toggle:checked~.header .labels-toggle .back-box::after{
+	left: 1.17rem;
+	transition: 200ms ease-in-out;
+}
+
+/* checked styles span */
+
+.toggle:checked~.card1 .month-price,
+.toggle:checked~.card2 .month-price,
+.toggle:checked~.card3 .month-price {
+	display: inline-block;
+}
+
+.toggle:checked~.card1 .year-price,
+.toggle:checked~.card2 .year-price,
+.toggle:checked~.card3 .year-price {
+	display: none;
 }

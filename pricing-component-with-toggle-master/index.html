@@ -17,13 +17,21 @@
 </head>
 <body>
   <main>
-    <div class="header">
-      <h1>Our Pricing</h1>
-      Annually
-      Monthly
-    </div>
 
     <div class="container">
+
+      <input type="checkbox" id="toggle" class="toggle"></input>
+
+      <div class="header">
+        <h1>Our Pricing</h1>
+
+        <div class="labels-toggle">
+          <label for="toggle" class="ball-box">Annually</label>
+          <label for="toggle" class="back-box">Monthly</label>
+        </div>
+      </div>
+
+
       <div class="card1">
         <h2>Basic</h2>
 
@@ -39,7 +47,7 @@
         <button>Learn More</button>
       </div>
       
-      <div class="card2">
+      <div class="card2 color-1">
         <h2>Professional</h2>
         <span class="month-price">&dollar;24.99</span>
         <span class="year-price">&dollar;249.99</span>
