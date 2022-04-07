@@ -17,6 +17,7 @@
 /* ====layout==== */
 
 body {
+	height: 100vh;
 	margin: 0;
 }
 
@@ -25,6 +26,25 @@ body {
 	flex-direction: column;
 	align-items: center;
 	gap: 1.5rem;
+}
+
+.cards {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+}
+
+@media (min-width: 45rem) {
+
+	.cards {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 0;
+	}
+
 }
 
 /* ====background and fonts==== */
@@ -38,9 +58,20 @@ html {
 body {
 	background-image: url(images/bg-top.svg); 
 	background-repeat: no-repeat;
-	background-position: 15rem -2rem;
-	background-size: 18rem;
+	background-position: top right;
+	background-size: 35%;
 	background-color: var(--clr-vry-lght-blue);
+}
+
+@media (min-width: 45rem) {
+
+	body {
+		background-image: url(images/bg-top.svg),
+											url(images/bg-bottom.svg); 
+		background-position: top right, bottom left;
+		background-repeat: no-repeat;
+		background-size: 27%;
+	}
 }
 
 .card1,
@@ -69,20 +100,32 @@ button {
 	text-align: center;
 }
 
-.card1,
-.card2,
-.card3{
-	text-align: center;
+.cards {
+	width: 100%;
 }
 
+.cards {
+	text-align: center;
+}
 
 .card1,
 .card2,
 .card3 {
 	background-color: #fff;
-	width: 75%;
-	padding: 0 1rem 2rem;
+	width: min(20rem, 80%);
+	padding: 0 1rem 1.5rem;
 	border-radius: 1rem;
+}
+
+@media (min-width: 45rem) {
+
+	.card2 {
+		padding: 1.5rem 0 3rem;
+	}
+
+	.card2 button {
+		width: 90%;
+	}
 }
 
 .card2 {
@@ -161,7 +204,10 @@ button {
 }
 
 .toggle {
-	display: none;
+	opacity: 0;
+	position: absolute;
+	left: -9000px;
+	top: -9000px;
 }
 
 /* checked styles toggle */
@@ -173,14 +219,14 @@ button {
 
 /* checked styles span */
 
-.toggle:checked~.card1 .month-price,
-.toggle:checked~.card2 .month-price,
-.toggle:checked~.card3 .month-price {
+.toggle:checked~.cards .card1 .month-price,
+.toggle:checked~.cards .card2 .month-price,
+.toggle:checked~.cards .card3 .month-price {
 	display: inline-block;
 }
 
-.toggle:checked~.card1 .year-price,
-.toggle:checked~.card2 .year-price,
-.toggle:checked~.card3 .year-price {
+.toggle:checked~.cards .card1 .year-price,
+.toggle:checked~.cards .card2 .year-price,
+.toggle:checked~.cards .card3 .year-price {
 	display: none;
 }
