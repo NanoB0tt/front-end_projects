@@ -74,6 +74,10 @@ body {
 	}
 }
 
+.header {
+	color: var(--clr-drk-gry-blue);
+}
+
 .card1,
 .card3 {
 	color: var(--clr-drk-gry-blue);
