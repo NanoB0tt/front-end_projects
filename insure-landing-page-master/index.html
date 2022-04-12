@@ -2,54 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Insure landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main>
+    <nav class="nav-bar">
 
-  How we work
-  Blog
-  Account
-  View plans
+      <div class="logo">
 
-  Humanizing your insurance.
+        <img src="images/logo.svg">
+        <button class="btn" data-status="open"></button>
 
-  Get your life insurance coverage easier and faster. We blend our expertise 
-  and technology to help you find the plan that’s right for you. Ensure you 
-  and your loved ones are protected.
+      </div>
 
-  View plans
+      <div class="toggle-nav" data-toggle="false">
 
-  We’re different
+        <ul class="ulist">
+          <li>How we work</li>
+          <li>Blog</li>
+          <li>Account</li>
+          <li>View plans</li>
+        </ul>
 
-  Snappy Process
+      </div>
+      
+    </nav>
 
-  Our application process can be completed in minutes, not hours. Don’t get 
-  stuck filling in tedious forms.
+    <div class="header">
+      Humanizing your insurance.
 
-  Affordable Prices
+      Get your life insurance coverage easier and faster. We blend our expertise 
+      and technology to help you find the plan that’s right for you. Ensure you 
+      and your loved ones are protected.
 
-  We don’t want you worrying about high monthly costs. Our prices may be low, 
-  but we still offer the best coverage possible.
+      View plans
+    </div>
 
-  People First
+    <div class="three-colums">
+      We’re different
 
-  Our plans aren’t full of conditions and clauses to prevent payouts. We make 
-  sure you’re covered when you need it.
+      Snappy Process
 
-  Find out more about how we work
+      Our application process can be completed in minutes, not hours. Don’t get 
+      stuck filling in tedious forms.
 
-  How we work
+      Affordable Prices
 
+      We don’t want you worrying about high monthly costs. Our prices may be low, 
+      but we still offer the best coverage possible.
+
+      People First
+
+      Our plans aren’t full of conditions and clauses to prevent payouts. We make 
+      sure you’re covered when you need it.
+    </div>
+
+    <div class="box-with-btn">
+      Find out more about how we work
+
+      How we work
+    </div>
+    <div class="links-icons"></div>
+
+  </main>
+  <footer>
   Our company
 
   How we work
@@ -75,11 +97,7 @@
   Careers
   Press
   Licenses
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </footer>
+  <script src="main.js"></script>
 </body>
 </html>

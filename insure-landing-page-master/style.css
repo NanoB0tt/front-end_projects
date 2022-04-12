@@ -1,0 +1,126 @@
+/* ====imports==== */
+
+/* Import Dm Serif Display */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+/* Import Karla */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* ====root variables==== */
+:root {
+	/* colors */
+
+	/* primary */
+	--clr-drk-violet: hsl(256, 26%, 20%);
+	--clr-gry-blue: hsl(216, 30%, 68%);
+	/* neutral */
+	--clr-very-drk-violet: hsl(270, 9%, 17%);
+	--clr-drk-gry-violet: hsl(273, 4%, 51%);
+	--clr-very-lght-gry: hsl(0, 0%, 98%);
+}
+
+/* ====box sizing==== */
+*, 
+*::before, *::after {
+	box-sizing: border-box;
+}
+
+/* ====layout==== */
+body {
+	margin: 0;
+}
+
+/* ====typography==== */
+html {
+	font-size: 16px;
+}
+/*
+### Headings
+
+- Family: [DM Serif Display]
+- Weights: 400
+### Body
+- Family: [Karla]
+- Weights: 400, 700
+*/
+
+/* nav bar typography */
+.ulist {
+	font-family: 'Karla', sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: white;
+}
+
+/* ====nav bar==== */
+.nav-bar {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+
+.logo {
+	background-color: #fff;
+}
+
+.logo img {
+	padding: 1.5rem;
+}
+
+.btn {
+	position: absolute;
+	top: 1rem;
+	right: 2rem;
+	width: 2rem;
+	background-image: url(images/icon-hamburger.svg);
+	aspect-ratio: 1;
+	border: none;
+	cursor: pointer;
+}
+
+.btn[data-status="close"] {
+	background-image: url(images/icon-close.svg);
+}
+
+.toggle-nav[data-toggle="false"]  {
+	transform: translateX(100%);
+	transition: transform ease-in 300ms;
+}
+
+.toggle-nav {
+	transition: transform ease-in 300ms;
+}
+
+.ulist {
+	background-color: var(--clr-very-drk-violet);
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+	background-image: url(images/bg-pattern-mobile-nav.svg);
+	background-repeat: no-repeat;
+	background-position: 0 25rem;
+	align-items: center;
+	text-align: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+}
+
+
+.ulist li {
+	width: 87%;
+	padding: 1rem;
+	cursor: pointer;
+}
+
+.ulist li:first-child {
+	margin-top: 1rem;
+}
+
+.ulist li:hover {
+	border: 2px solid white;
+}
+
