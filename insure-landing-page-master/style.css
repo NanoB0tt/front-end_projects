@@ -53,6 +53,13 @@ html {
 	color: white;
 }
 
+@media(min-width: 50rem) {
+.ulist {
+	color: var(--clr-drk-gry-violet);
+}
+
+}
+
 /* header typography */
 .header h1 {
 	font-family: 'DM Serif Display', sans-serif;
@@ -72,6 +79,16 @@ html {
 	font-family: 'Karla', sans-serif;
 	color: white;
 	text-transform: uppercase;
+}
+
+@media(min-width: 50rem) {
+	.header h1 {
+		max-width: 20rem;
+	}
+
+	.header p {
+		max-width: 24rem;
+	}
 }
 
 /* info typography */
@@ -180,7 +197,7 @@ footer p {
 	gap: .5rem;
 	background-image: url(images/bg-pattern-mobile-nav.svg);
 	background-repeat: no-repeat;
-	background-position: 0 25rem;
+	background-position: bottom right;
 	align-items: center;
 	text-align: center;
 	list-style: none;
@@ -204,6 +221,61 @@ footer p {
 	border: 2px solid white;
 }
 
+@media(min-width: 50rem) {
+	
+	.nav-bar {
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		background-color: white;
+	}
+
+	.logo {
+		width: auto;
+	}
+
+	.btn {
+		display: none;
+	}
+
+	.toggle-nav[data-toggle="false"]  {
+		transform: translateX(0);
+	}
+
+	.ulist {
+		background: none;
+		text-align: right;
+		flex-direction: row;
+		height: auto
+	}
+
+	.ulist li {
+		width: auto;
+		padding: .7rem;
+		cursor: pointer;
+	}
+
+	.ulist li:first-child {
+		margin: 0;
+	}
+
+	.ulist li:last-child {
+		border: 1px solid var(--clr-very-drk-violet);
+		color: var(--clr-very-drk-violet);
+	}
+
+	.ulist li:last-child:hover {
+		background-color: var(--clr-very-drk-violet);
+		border: 1px solid var(--clr-very-drk-violet);
+		color: white;
+	}
+
+	.ulist li:hover {
+		border: none;
+		color: var(--clr-drk-violet);
+	}
+}
+
 /* ==== header ==== */
 
 
@@ -211,17 +283,17 @@ footer p {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	background-color: var(--clr-drk-violet);
 }
 
 .header img {
-	margin-top: 4.5rem;
+	margin-top: 4.59rem;
 }
 
 .content {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: var(--clr-drk-violet);
 	background-image: url(images/bg-pattern-intro-left-mobile.svg);
 	background-repeat: no-repeat;
 	width: 100%
@@ -241,6 +313,32 @@ footer p {
 	padding: .6rem 1.3rem;
 	border: 1px solid white;
 	margin-bottom: 5rem;
+}
+
+@media(min-width: 50rem) {
+	.header {
+		flex-direction: row-reverse;
+		justify-content: center;
+		text-align: left;
+		gap: 5rem;
+		height: 30rem;
+	}
+
+	.header-img {
+		margin-top: 6rem;
+		width: 20rem;
+	}
+
+	.header-img img {
+		max-width: 100%;
+	}
+
+	.content {
+		align-items: flex-start;
+		width: 25rem;
+		background: none;
+		margin-top: 5rem;
+	}
 }
 
 /* ====info==== */
