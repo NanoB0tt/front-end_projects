@@ -21,10 +21,12 @@
     --ff-headings: "Raleway";
     --fw-headings-400: 400;
     --fw-headings-700: 700;
+    --fs-headings: 2.3rem;
     /*Body*/
     --ff-body: "Open Sans";
     --fw-body-400: 400;
     --fw-body-700: 700;
+    --fs-body: 1.4rem;
 }
 
 /*### RESET CSS ###*/
@@ -115,11 +117,109 @@ nav {
 }
 
 .logo {
-    width: 11rem;
+    width: 8.5rem;
 }
 
 .nav-links {
     display: flex;
     gap: 1rem;
     list-style: none;
+}
+
+.intro {
+    display: grid;
+    grid-template-rows: 1fr 10rem 1fr;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.curvy {
+    background-image: url("images/bg-curvy-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: 0 24rem;
+    background-color: var(--clr-bg-intro_and_email);
+    padding: 4rem 2rem 8rem;
+    grid-row: 1 / 3;
+    grid-column: 1;
+}
+
+.overlap-heading {
+    font-size: var(--fs-headings);
+    font-family: var(--ff-headings);
+    font-weight: var(--fw-headings-700);
+    max-width: 40ch;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    grid-row: 2 / 3;
+    grid-column: 1;
+    z-index: 1;
+}
+
+.dark-intro {
+    background-color: var(--clr-bg-main);
+    padding: 2rem 2rem;
+}
+
+.dark-intro p {
+    margin: 2rem 0 0;
+}
+
+.btn-cyan {
+    background-color: var(--clr-cyan);
+    border: none;
+    border-radius: 5rem;
+    font-size: 1.8rem;
+    color: var(--clr-white);
+    font-family: var(--fs-headings);
+    font-weight: var(--fw-headings-700);
+    margin-top: 3rem;
+    padding: 1.2rem 9rem;
+}
+
+.info-cards {
+    margin: 0 auto;
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--clr-bg-main);
+}
+
+.i-card {
+    margin: 0 0 10rem;
+}
+
+.i-card img{
+    margin: 0 auto;
+}
+
+.i-card h2 {
+    font-size: 1.8rem;
+    font-family: var(--fs-headings);
+    font-weight: var(--fw-headings-700);
+    margin: 2rem 0 1rem;
+}
+
+.i-card p {
+    max-width: 39ch;
+    margin: 0 auto;
+}
+
+.i-card:last-child p:last-child {
+   max-width: 42ch;
+}
+
+.how-works {
+    background-color: var(--clr-bg-main);
+    text-align: left;
+    padding: 0 2rem;
+}
+
+.how-works h2 {
+    font-size: 1.8rem;
+    font-family: var(--fs-headings);
+    font-weight: var(--fw-headings-700);
+    margin: 2rem 0 1rem;
+}
+
+.how-works p {
+    margin: 1.5rem 0;
 }
